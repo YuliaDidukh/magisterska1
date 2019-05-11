@@ -1,0 +1,11 @@
+IF OBJECT_ID(N'MyProc', N'P') IS NOT NULL
+   DROP PROCEDURE MyProc
+GO
+
+CREATE PROCEDURE MyProc
+AS
+   DELETE FROM [TabName]
+
+   BULK INSERT [TabName]
+   FROM 'C:\1.txt'
+RETURN 0
